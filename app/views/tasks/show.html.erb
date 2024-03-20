@@ -5,3 +5,9 @@
 <p>Status: <%= @task.complete ? "Complete" : "Incomplete" %></p>
 <br>
 <%= link_to "Edit", edit_task_path(@task) %>
+<br>
+<br>
+<%= link_to "Delete", task_path(@task), data: {
+  turbo_method: :delete,
+  turbo_confirm: "Are you sure?"
+} %>
