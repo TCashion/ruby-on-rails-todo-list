@@ -3,4 +3,5 @@
 <h1>Task: <%= @task.title %></h1>
 <br>
 <p>Status: <%= @task.complete ? "Complete" : "Incomplete" %></p>
-
+<br>
+<%= link_to "Edit", edit_task_path(@task) %>
